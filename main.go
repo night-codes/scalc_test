@@ -83,15 +83,15 @@ func parseExpression(s string) ([]int, error) {
 
 	if strings.HasPrefix(s, "[") && strings.HasSuffix(s, "]") {
 		s := strings.TrimSpace(s[1 : len(s)-1])
-		if strings.HasPrefix(s, "INT") {
+		if strings.HasPrefix(s, "INT ") {
 			fn = intersect
-		} else if strings.HasPrefix(s, "SUM") {
+		} else if strings.HasPrefix(s, "SUM ") {
 			fn = sum
-		} else if strings.HasPrefix(s, "DIF") {
+		} else if strings.HasPrefix(s, "DIF ") {
 			fn = difference
 		}
 		if fn != nil {
-			ret, err := parseFuncArgs(s[3:])
+			ret, err := parseFuncArgs(s[4:])
 			if err != nil {
 				return nil, err
 			}
