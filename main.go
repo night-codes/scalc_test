@@ -58,13 +58,6 @@ func intersect(data [][]int) []int {
 
 // difference of first set and the rest ones
 func difference(data [][]int) []int {
-	if len(data) == 0 {
-		return []int{}
-	}
-	if len(data) == 1 {
-		return data[0]
-	}
-
 	m := map[int]bool{}
 	for k := range data {
 		for _, v := range data[k] {

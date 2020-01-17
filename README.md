@@ -54,3 +54,11 @@ The task will be assessed taking into consideration the following criteria (sort
 3
 4
 ```
+
+## Use:
+
+Run tests:
+`$ make test`
+
+Run app:
+`$ make run`
