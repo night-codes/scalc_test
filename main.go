@@ -12,7 +12,7 @@ import (
 func main() {
 	ret, err := parseExpression(strings.Join(os.Args[1:], " "))
 	if err != nil {
-		fmt.Println(err)
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 	}
 
 	sort.Ints(ret)
